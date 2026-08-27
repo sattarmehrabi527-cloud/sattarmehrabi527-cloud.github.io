@@ -1,2 +1,980 @@
-<h1>تولید و پخش جوراب مهرابی</h1>
-<p>به سایت رسمی تولید و پخش جوراب مهرابی خوش آمدید.</p>
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="تولید و پخش جوراب مهرابی | جوراب مردانه، زنانه، بچگانه، مچی، نیم ساق و فانتزی">
+<meta name="keywords" content="جوراب مهرابی, تولید جوراب, پخش جوراب, جوراب عمده, جوراب مردانه, جوراب زنانه, جوراب بچگانه">
+<meta name="author" content="Mehrabi Socks">
+<title>تولید و پخش جوراب مهرابی | MEHRABI</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Tahoma,Arial,sans-serif;
+  background:#050505;
+  color:#fff;
+  line-height:1.8;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.container{
+  width:92%;
+  max-width:1250px;
+  margin:auto;
+}
+
+/* HEADER */
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(5,5,5,.96);
+  border-bottom:1px solid #b88925;
+  backdrop-filter:blur(10px);
+}
+
+.nav{
+  min-height:82px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo-mark{
+  width:54px;
+  height:54px;
+  border:2px solid #d7aa45;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#e3b64e;
+  font-size:30px;
+  font-weight:bold;
+  box-shadow:0 0 15px rgba(218,169,63,.25);
+}
+
+.logo-text strong{
+  display:block;
+  color:#e5b64d;
+  font-size:27px;
+  letter-spacing:3px;
+}
+
+.logo-text span{
+  display:block;
+  color:#ddd;
+  font-size:11px;
+  letter-spacing:3px;
+}
+
+nav{
+  display:flex;
+  gap:30px;
+  align-items:center;
+}
+
+nav a{
+  color:#eee;
+  transition:.3s;
+}
+
+nav a:hover{
+  color:#e5b64d;
+}
+
+.menu-btn{
+  display:none;
+  font-size:28px;
+  color:#e5b64d;
+  cursor:pointer;
+}
+
+/* HERO */
+.hero{
+  min-height:600px;
+  display:flex;
+  align-items:center;
+  background:
+    radial-gradient(circle at 20% 50%,rgba(190,140,45,.22),transparent 35%),
+    linear-gradient(120deg,#17120a,#030303 55%,#111);
+  border-bottom:1px solid #4e3917;
+}
+
+.hero-content{
+  width:100%;
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  align-items:center;
+  gap:40px;
+  padding:80px 0;
+}
+
+.hero-text small{
+  color:#e1b34c;
+  font-size:21px;
+}
+
+.hero-text h1{
+  font-size:clamp(45px,6vw,78px);
+  color:#e9b949;
+  line-height:1.25;
+  margin:10px 0 20px;
+  text-shadow:0 5px 25px rgba(225,174,65,.2);
+}
+
+.hero-text h2{
+  font-size:26px;
+  margin-bottom:18px;
+}
+
+.hero-text p{
+  color:#ddd;
+  font-size:18px;
+  max-width:620px;
+}
+
+.buttons{
+  display:flex;
+  gap:15px;
+  margin-top:35px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  padding:13px 28px;
+  border-radius:10px;
+  font-weight:bold;
+  transition:.3s;
+  display:inline-block;
+}
+
+.btn-gold{
+  background:linear-gradient(135deg,#f1ca68,#a97015);
+  color:#111;
+}
+
+.btn-outline{
+  border:1px solid #d4a53c;
+  color:#e9bd55;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 25px rgba(214,166,58,.18);
+}
+
+.hero-socks{
+  min-height:390px;
+  border:1px solid #73541d;
+  border-radius:25px;
+  background:
+    radial-gradient(circle,#76551d22,transparent 65%),
+    linear-gradient(145deg,#191919,#080808);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.sock{
+  width:90px;
+  height:245px;
+  border-radius:20px 20px 45px 45px;
+  margin:-8px;
+  transform:rotate(var(--r));
+  box-shadow:0 15px 30px #000;
+  position:relative;
+}
+
+.sock:before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:45px;
+  border-radius:20px 20px 5px 5px;
+  background:rgba(255,255,255,.9);
+}
+
+.sock.black{background:#101010;--r:-13deg}
+.sock.stripe{background:repeating-linear-gradient(#111 0 25px,#eee 25px 45px);--r:-4deg}
+.sock.bear{background:#d2b58c;--r:7deg}
+.sock.pattern{background:repeating-linear-gradient(45deg,#111 0 15px,#eee 15px 24px);--r:14deg}
+
+.hero-socks:after{
+  content:"MEHRABI";
+  position:absolute;
+  bottom:25px;
+  color:#d8a83e;
+  font-size:16px;
+  letter-spacing:5px;
+}
+
+/* FEATURES */
+.features{
+  margin-top:-40px;
+  position:relative;
+  z-index:2;
+}
+
+.feature-box{
+  border:1px solid #73551f;
+  background:#0b0b0b;
+  border-radius:22px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  overflow:hidden;
+}
+
+.feature{
+  padding:22px 15px;
+  text-align:center;
+  border-left:1px solid #444;
+}
+
+.feature:last-child{
+  border-left:0;
+}
+
+.feature-icon{
+  font-size:32px;
+  color:#e5b548;
+}
+
+.feature h3{
+  color:#e8ba51;
+  font-size:17px;
+}
+
+.feature p{
+  color:#aaa;
+  font-size:13px;
+}
+
+/* SECTION */
+section{
+  padding:75px 0;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.section-title h2{
+  color:#e7b548;
+  font-size:34px;
+}
+
+.section-title p{
+  color:#aaa;
+  margin-top:5px;
+}
+
+/* PRODUCTS */
+.products{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.product{
+  background:#101010;
+  border:1px solid #76571f;
+  border-radius:18px;
+  overflow:hidden;
+  transition:.3s;
+}
+
+.product:hover{
+  transform:translateY(-7px);
+  box-shadow:0 12px 30px rgba(216,169,65,.12);
+}
+
+.product-image{
+  height:220px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(135deg,#eee,#bbb);
+  position:relative;
+}
+
+.product-image .mini-sock{
+  width:65px;
+  height:165px;
+  border-radius:15px 15px 35px 35px;
+  background:#222;
+  transform:rotate(-10deg);
+  box-shadow:15px 10px 20px #555;
+}
+
+.product:nth-child(2) .mini-sock{
+  background:#ddd;
+  box-shadow:15px 10px 20px #555;
+}
+
+.product:nth-child(3) .mini-sock{
+  background:#555;
+}
+
+.product:nth-child(4) .mini-sock{
+  background:#d58fa2;
+}
+
+.product:nth-child(5) .mini-sock{
+  background:repeating-linear-gradient(#222 0 18px,#eee 18px 34px);
+}
+
+.product:nth-child(6) .mini-sock{
+  background:#111;
+}
+
+.product:nth-child(7) .mini-sock{
+  background:#777;
+}
+
+.product:nth-child(8) .mini-sock{
+  background:#222;
+}
+
+.product-info{
+  padding:15px;
+  text-align:center;
+}
+
+.product-info h3{
+  color:#e6b548;
+  font-size:18px;
+}
+
+.product-info p{
+  color:#aaa;
+  font-size:13px;
+}
+
+/* ABOUT */
+.about{
+  background:linear-gradient(180deg,#090909,#12100b,#090909);
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+}
+
+.about-card{
+  border:1px solid #73551f;
+  border-radius:22px;
+  padding:35px;
+  background:#0b0b0b;
+}
+
+.about-card h2{
+  color:#e5b348;
+  font-size:32px;
+  margin-bottom:18px;
+}
+
+.about-card p{
+  color:#ccc;
+  margin-bottom:15px;
+}
+
+.check{
+  margin:12px 0;
+  color:#ddd;
+}
+
+.check b{
+  color:#e6b64d;
+}
+
+/* CTA */
+.cta{
+  text-align:center;
+  border:1px solid #76571e;
+  border-radius:25px;
+  padding:55px 20px;
+  background:
+    radial-gradient(circle at center,#5e421522,transparent 65%),
+    #0b0b0b;
+}
+
+.cta h2{
+  color:#e8b84d;
+  font-size:35px;
+}
+
+.cta p{
+  color:#bbb;
+  margin:10px auto 25px;
+}
+
+/* CONTACT */
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+}
+
+.contact-card{
+  padding:30px;
+  background:#0c0c0c;
+  border:1px solid #73551f;
+  border-radius:20px;
+}
+
+.contact-card h3{
+  color:#e6b64c;
+  margin-bottom:15px;
+}
+
+.contact-item{
+  padding:12px 0;
+  border-bottom:1px solid #272727;
+  color:#ddd;
+}
+
+/* FOOTER */
+footer{
+  border-top:1px solid #604718;
+  background:#030303;
+  padding:35px 0;
+  text-align:center;
+}
+
+.footer-logo{
+  color:#e4b44a;
+  font-size:25px;
+  font-weight:bold;
+  letter-spacing:3px;
+}
+
+footer p{
+  color:#888;
+  margin:8px 0 18px;
+}
+
+.social{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.social a{
+  border:1px solid #72531c;
+  padding:8px 18px;
+  border-radius:8px;
+  color:#ddb04a;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+  nav{
+    display:none;
+    position:absolute;
+    top:82px;
+    right:0;
+    left:0;
+    background:#080808;
+    flex-direction:column;
+    padding:20px;
+    border-bottom:1px solid #76571f;
+  }
+
+  nav.active{
+    display:flex;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  .hero-content{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .hero-text p{
+    margin:auto;
+  }
+
+  .buttons{
+    justify-content:center;
+  }
+
+  .feature-box{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .feature:nth-child(2){
+    border-left:0;
+  }
+
+  .products{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .about-grid,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:550px){
+  .nav{
+    min-height:70px;
+  }
+
+  .logo-mark{
+    width:45px;
+    height:45px;
+    font-size:24px;
+  }
+
+  .logo-text strong{
+    font-size:21px;
+  }
+
+  .logo-text span{
+    font-size:8px;
+  }
+
+  nav{
+    top:70px;
+  }
+
+  .hero{
+    min-height:auto;
+  }
+
+  .hero-content{
+    padding:55px 0;
+  }
+
+  .hero-text h1{
+    font-size:44px;
+  }
+
+  .hero-text h2{
+    font-size:21px;
+  }
+
+  .hero-text p{
+    font-size:15px;
+  }
+
+  .hero-socks{
+    min-height:310px;
+  }
+
+  .sock{
+    width:60px;
+    height:190px;
+  }
+
+  .feature-box{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .feature{
+    padding:16px 8px;
+  }
+
+  .products{
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+  }
+
+  .product-image{
+    height:155px;
+  }
+
+  .product-image .mini-sock{
+    width:48px;
+    height:120px;
+  }
+
+  .product-info{
+    padding:10px 5px;
+  }
+
+  .product-info h3{
+    font-size:14px;
+  }
+
+  .section-title h2{
+    font-size:27px;
+  }
+
+  .about-card{
+    padding:22px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+
+    <a href="#home" class="logo">
+      <div class="logo-mark">M</div>
+      <div class="logo-text">
+        <strong>MEHRABI</strong>
+        <span>PREMIUM SOCKS</span>
+      </div>
+    </a>
+
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+    <nav id="menu">
+      <a href="#home">صفحه اصلی</a>
+      <a href="#products">محصولات</a>
+      <a href="#about">درباره ما</a>
+      <a href="#contact">تماس با ما</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container hero-content">
+
+    <div class="hero-text">
+      <small>تولید و پخش مستقیم</small>
+
+      <h1>جوراب مهرابی</h1>
+
+      <h2>کیفیت بالا، قیمت مناسب، ارسال سراسر ایران</h2>
+
+      <p>
+        تولید و پخش انواع جوراب مردانه، زنانه، بچگانه و فانتزی
+        با تمرکز بر کیفیت، تنوع و قیمت مناسب برای فروشگاه‌داران و مشتریان.
+      </p>
+
+      <div class="buttons">
+        <a class="btn btn-gold" href="#products">
+          مشاهده محصولات
+        </a>
+
+        <a class="btn btn-outline"
+           href="https://eitaa.com/jorabmehrabi"
+           target="_blank">
+          سفارش و ارتباط در ایتا
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-socks">
+      <div class="sock black"></div>
+      <div class="sock stripe"></div>
+      <div class="sock bear"></div>
+      <div class="sock pattern"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FEATURES -->
+<div class="container features">
+  <div class="feature-box">
+
+    <div class="feature">
+      <div class="feature-icon">🏭</div>
+      <h3>تولید مستقیم</h3>
+      <p>تولید از کارخانه خودمان</p>
+    </div>
+
+    <div class="feature">
+      <div class="feature-icon">🧦</div>
+      <h3>تنوع بالا</h3>
+      <p>مدل‌های مختلف برای همه سلیقه‌ها</p>
+    </div>
+
+    <div class="feature">
+      <div class="feature-icon">✓</div>
+      <h3>ضمانت کیفیت</h3>
+      <p>توجه ویژه به کیفیت محصولات</p>
+    </div>
+
+    <div class="feature">
+      <div class="feature-icon">🚚</div>
+      <h3>ارسال سریع</h3>
+      <p>ارسال سفارش به سراسر کشور</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>دسته‌بندی محصولات</h2>
+      <p>انواع جوراب مهرابی برای خانم‌ها، آقایان و کودکان</p>
+    </div>
+
+    <div class="products">
+
+      <a class="product" href="#contact">
+        <div class="product-image">
+          <div class="mini-sock"></div>
+        </div>
+        <div class="product-info">
+          <h3>جوراب فانتزی</h3>
+          <p>مدل‌های جذاب و متنوع</p>
+        </div>
+      </a>
+
+      <a class="product" href="#contact">
+        <div class="product-image">
+          <div class="mini-sock"></div>
+        </div>
+        <div class="product-info">
+          <h3>جوراب بچگانه</h3>
+          <p>مناسب کودکان</p>
+        </div>
+      </a>
+
+      <a class="product" href="#contact">
+        <div class="product-image">
+          <div class="mini-sock"></div>
+        </div>
+        <div class="product-info">
+          <h3>جوراب مردانه</h3>
+          <p>کیفیت و دوام بالا</p>
+        </div>
+      </a>
+
+      <a class="product" href="#contact">
+        <div class="product-image">
+          <div class="mini-sock"></div>
+        </div>
+        <div class="product-info">
+          <h3>جوراب زنانه</h3>
+          <p>تنوع مدل و رنگ</p>
+        </div>
+      </a>
+
+      <a class="product" href="#contact">
+        <div class="product-image">
+          <div class="mini-sock"></div>
+        </div>
+        <div class="product-info">
+          <h3>جوراب نیم ساق</h3>
+          <p>مدل‌های پرطرفدار</p>
+        </div>
+      </a>
+
+      <a class="product" href="#contact">
+        <div class="product-image">
+          <div class="mini-sock"></div>
+        </div>
+        <div class="product-info">
+          <h3>جوراب ساق کوتاه</h3>
+          <p>مناسب استفاده روزمره</p>
+        </div>
+      </a>
+
+      <a class="product" href="#contact">
+        <div class="product-image">
+          <div class="mini-sock"></div>
+        </div>
+        <div class="product-info">
+          <h3>جوراب مچی</h3>
+          <p>سبک و راحت</p>
+        </div>
+      </a>
+
+      <a class="product" href="#contact">
+        <div class="product-image">
+          <div class="mini-sock"></div>
+        </div>
+        <div class="product-info">
+          <h3>سفارش عمده</h3>
+          <p>ویژه فروشگاه‌داران</p>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container about-grid">
+
+    <div class="about-card">
+      <h2>درباره جوراب مهرابی</h2>
+
+      <p>
+        مجموعه جوراب مهرابی با هدف تولید و پخش جوراب باکیفیت
+        و ارائه قیمت مناسب فعالیت می‌کند.
+      </p>
+
+      <p>
+        تلاش ما این است که محصولات متنوع و باکیفیتی را
+        در اختیار فروشگاه‌داران و مشتریان سراسر ایران قرار دهیم.
+      </p>
+    </div>
+
+    <div class="about-card">
+
+      <div class="check">✓ <b>تولید مستقیم:</b> بدون واسطه</div>
+      <div class="check">✓ <b>تنوع محصولات:</b> مردانه، زنانه و بچگانه</div>
+      <div class="check">✓ <b>قیمت مناسب:</b> مناسب خرید عمده</div>
+      <div class="check">✓ <b>ارسال:</b> به سراسر کشور</div>
+      <div class="check">✓ <b>پشتیبانی:</b> پاسخگویی و مشاوره قبل از خرید</div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section>
+  <div class="container">
+    <div class="cta">
+
+      <h2>برای سفارش آماده‌ای؟</h2>
+
+      <p>
+        برای مشاهده محصولات، دریافت اطلاعات و ثبت سفارش با ما در ارتباط باشید.
+      </p>
+
+      <a class="btn btn-gold"
+         href="https://eitaa.com/jorabmehrabi"
+         target="_blank">
+        ارتباط و سفارش در ایتا
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>تماس با جوراب مهرابی</h2>
+      <p>برای خرید عمده و دریافت اطلاعات با ما در ارتباط باشید</p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-card">
+        <h3>ارتباط مستقیم</h3>
+
+        <div class="contact-item">
+          📱 پیام و سفارش از طریق ایتا
+        </div>
+
+        <div class="contact-item">
+          🚚 ارسال سفارش به سراسر ایران
+        </div>
+
+        <div class="contact-item">
+          📦 فروش عمده و همکاری با فروشگاه‌داران
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <h3>شبکه‌های اجتماعی</h3>
+
+        <p style="color:#aaa;margin-bottom:20px;">
+          برای دیدن محصولات و اطلاع از مدل‌های جدید، ما را دنبال کنید.
+        </p>
+
+        <a class="btn btn-outline"
+           href="https://eitaa.com/jorabmehrabi"
+           target="_blank">
+          کانال ایتا جوراب مهرابی
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+
+    <div class="footer-logo">MEHRABI</div>
+
+    <p>
+      تولید و پخش جوراب مهرابی
+    </p>
+
+    <div class="social">
+
+      <a href="https://eitaa.com/jorabmehrabi"
+         target="_blank">
+        ایتا
+      </a>
+
+      <a href="#products">
+        محصولات
+      </a>
+
+      <a href="#contact">
+        تماس با ما
+      </a>
+
+    </div>
+
+    <p style="margin-top:25px;font-size:12px;">
+      © تمامی حقوق برای جوراب مهرابی محفوظ است.
+    </p>
+
+  </div>
+</footer>
+
+<script>
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("active");
+}
+
+document.querySelectorAll("nav a").forEach(function(link){
+  link.addEventListener("click",function(){
+    document.getElementById("menu").classList.remove("active");
+  });
+});
+</script>
+
+</body>
+  </html>
