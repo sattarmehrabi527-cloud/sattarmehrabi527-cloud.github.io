@@ -13,6 +13,67 @@
   box-sizing:border-box;
   margin:0;
   padding:0;
+<!-- موقعیت کارگاه -->
+<section class="location-section">
+  <h2>📍 موقعیت کارگاه جوراب مهرابی</h2>
+  <p>برای مشاهده موقعیت و مسیریابی، از نقشه زیر استفاده کنید.</p>
+
+  <div class="map-box">
+    <iframe
+      src="https://www.google.com/maps?q=32.654160,51.506260&z=16&output=embed"
+      width="100%"
+      height="350"
+      style="border:0; border-radius:18px;"
+      loading="lazy">
+    </iframe>
+  </div>
+
+  <a class="balad-btn"
+     href="https://balad.ir/location?latitude=32.654160&longitude=51.506260&zoom=16.500000"
+     target="_blank">
+     🗺 مسیریابی با بلد
+  </a>
+</section>
+
+<style>
+.location-section{
+  padding:70px 20px;
+  text-align:center;
+  background:#111;
+  color:#fff;
+}
+
+.location-section h2{
+  color:#d4a84f;
+  font-size:28px;
+  margin-bottom:15px;
+}
+
+.location-section p{
+  color:#ccc;
+  margin-bottom:30px;
+}
+
+.map-box{
+  max-width:900px;
+  margin:auto;
+  overflow:hidden;
+  border-radius:18px;
+  border:1px solid #b88a3b;
+}
+
+.balad-btn{
+  display:inline-block;
+  margin-top:25px;
+  padding:15px 35px;
+  background:linear-gradient(135deg,#f5c85b,#b87816);
+  color:#111;
+  text-decoration:none;
+  border-radius:12px;
+  font-weight:bold;
+  font-size:18px;
+}
+</style>
 }
 
 html{
